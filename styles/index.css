@@ -9,14 +9,16 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  position: relative;
 }
+
 .pumpkin {
   background-color: #e1631d;
   height: 250px;
   width: 300px;
   position: relative;
   border-radius: 50%;
-  box-shadow: 20px 5px 20px 10px #d65417, -20px -5px 20px 10px #d65417,
+  box-shadow: 20px 5px 50px 10px #d65417, -20px -5px 50px 10px #d65417,
     40px 10px 100px 20px #a42e08, -40px -2px 100px 20px #a42e08,
     inset 4px 4px 20px 4px #fddb9a, inset -4px -4px 20px 8px #bd1c0f;
 }
@@ -80,4 +82,53 @@ body {
 }
 .pumpkin-teeth-4 {
   bottom: 2px;
+}
+
+/* Images styles */
+img {
+  position: absolute;
+}
+
+.bat,
+.basket,
+.candy,
+.skeleton {
+  top: 10%;
+  transform: translateY(-50%);
+}
+.ghost,
+.hand,
+.witch,
+.cat {
+  bottom: 10%;
+}
+.hand,
+.basket,
+.skeleton,
+.bat {
+  z-index: 100;
+  left: 45%;
+}
+.bat {
+  left: 30%;
+  top: 40%;
+}
+.candy {
+  top: 30%;
+  right: 30%;
+}
+.cat {
+  right: 30%;
+}
+.witch {
+  right: 30%;
+  bottom: 40%;
+}
+.ghost {
+  left: 30%;
+  bottom: 20%;
+}
+.skeleton {
+  left: 30%;
+  top: 20%;
 }
