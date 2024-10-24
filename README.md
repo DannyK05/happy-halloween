@@ -8,4 +8,5 @@ It was built with Html and Css alone and was actually used to try out css animat
 
 ## Inspiration
 
-![Inspo]("./assets/inspo.jpg")
+Here is the inspiration for the site
+![Inspo]("/assets/inspo.jpg")

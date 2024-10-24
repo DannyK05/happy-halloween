@@ -175,7 +175,17 @@ img {
   top: 20%;
   animation: skeleton-out ease-in-out 3s, float infinite linear 3.2s;
 }
-
+footer {
+  position: absolute;
+  bottom: 0;
+  color: #b5efaf;
+}
+footer a {
+  color: #42800a;
+  font-size: 28px;
+  font-family: "Halloween";
+  text-decoration: underline;
+}
 @keyframes vibrate {
   0% {
     transform: translateY(0px);
