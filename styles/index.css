@@ -21,6 +21,8 @@ body {
   box-shadow: 20px 5px 50px 10px #d65417, -20px -5px 50px 10px #d65417,
     40px 10px 100px 20px #a42e08, -40px -2px 100px 20px #a42e08,
     inset 4px 4px 20px 4px #fddb9a, inset -4px -4px 20px 8px #bd1c0f;
+  animation: vibrate infinite linear 1s;
+  backface-visibility: hidden;
 }
 .pumpkin-eye,
 .pumpkin-mouth,
@@ -87,6 +89,7 @@ body {
 /* Images styles */
 img {
   position: absolute;
+  backface-visibility: hidden;
 }
 
 .bat,
@@ -96,12 +99,7 @@ img {
   top: 10%;
   transform: translateY(-50%);
 }
-.ghost,
-.hand,
-.witch,
-.cat {
-  bottom: 10%;
-}
+
 .hand,
 .basket,
 .skeleton,
@@ -109,26 +107,194 @@ img {
   z-index: 100;
   left: 45%;
 }
+.basket {
+  animation: basket-out ease-in-out 3s, float infinite linear 5.2s;
+}
+.hand {
+  bottom: 10%;
+  animation: hand-out ease-in-out 3s, float infinite linear 5.2s;
+}
 .bat {
   left: 30%;
   top: 40%;
+  animation: bat-out ease-in-out 3s, float infinite linear 5.2s;
 }
 .candy {
-  top: 30%;
+  top: 25%;
   right: 30%;
+  animation: candy-out ease-in-out 3s, float infinite linear 3s;
 }
 .cat {
   right: 30%;
+  bottom: 10%;
+  animation: cat-out ease-in-out 3s, float infinite linear 5s;
 }
 .witch {
   right: 30%;
   bottom: 40%;
+  animation: witch-out ease-in-out 3s, float infinite linear 6s;
 }
 .ghost {
   left: 30%;
   bottom: 20%;
+  animation: ghost-out ease-in-out 3s, float infinite linear 4.4s;
 }
 .skeleton {
   left: 30%;
   top: 20%;
+  animation: skeleton-out ease-in-out 3s, float infinite linear 3.2s;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateY(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateY(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateY(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes skeleton-out {
+  0% {
+    left: 44%;
+    top: 40%;
+    z-index: 0;
+  }
+  80% {
+    z-index: 0;
+    left: 25%;
+    top: 20%;
+  }
+  100% {
+    left: 30%;
+    top: 20%;
+    z-index: 100;
+  }
+}
+@keyframes candy-out {
+  0% {
+    z-index: 0;
+    right: 40%;
+    top: 40%;
+  }
+  80% {
+    z-index: 0;
+    right: 25%;
+    top: 25%;
+  }
+  100% {
+    top: 25%;
+    right: 30%;
+  }
+}
+@keyframes cat-out {
+  0% {
+    z-index: 0;
+    right: 40%;
+    bottom: 40%;
+  }
+  80% {
+    z-index: 0;
+    right: 25%;
+    bottom: 5%;
+  }
+  100% {
+    right: 30%;
+    bottom: 10%;
+  }
+}
+@keyframes bat-out {
+  0% {
+    left: 44%;
+    top: 40%;
+    z-index: 0;
+  }
+  80% {
+    z-index: 0;
+    left: 25%;
+    top: 40%;
+  }
+  100% {
+    left: 30%;
+    top: 40%;
+    z-index: 100;
+  }
+}
+@keyframes basket-out {
+  0% {
+    top: 40%;
+    z-index: 0;
+  }
+  80% {
+    z-index: 0;
+    top: 5%;
+  }
+  100% {
+    top: 10%;
+    z-index: 100;
+  }
+}
+@keyframes ghost-out {
+  0% {
+    z-index: 0;
+    left: 44%;
+    bottom: 40%;
+  }
+  80% {
+    z-index: 0;
+    left: 25%;
+    bottom: 20%;
+  }
+  100% {
+    left: 30%;
+    bottom: 20%;
+  }
+}
+@keyframes witch-out {
+  0% {
+    z-index: 0;
+    right: 40%;
+    bottom: 40%;
+  }
+  80% {
+    z-index: 0;
+    right: 25%;
+    bottom: 40%;
+  }
+  100% {
+    right: 30%;
+    bottom: 40%;
+  }
+}
+@keyframes hand-out {
+  0% {
+    bottom: 40%;
+    z-index: 0;
+  }
+  80% {
+    z-index: 0;
+    bottom: 5%;
+  }
+  100% {
+    bottom: 10%;
+    z-index: 100;
+  }
 }
