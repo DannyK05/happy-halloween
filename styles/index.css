@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Halloween";
+  src: url("../assets/fonts/MonsterPumpkin-MVBzP.ttf");
+}
 * {
   margin: 0;
   text-decoration: none;
@@ -11,7 +15,22 @@ body {
   height: 100vh;
   position: relative;
 }
-
+h1 {
+  font-family: "Halloween", sans-serif;
+  position: absolute;
+  color: #42800a;
+  text-shadow: 5px 5px 10px #b5efaf, -5px -5px 10px #b5efaf;
+  font-size: 84px;
+  top: 40%;
+  animation: vibrate infinite linear 1s;
+  backface-visibility: hidden;
+}
+.happy {
+  left: 30px;
+}
+.halloween {
+  right: 30px;
+}
 .pumpkin {
   background-color: #e1631d;
   height: 250px;
