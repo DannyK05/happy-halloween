@@ -370,32 +370,33 @@ footer a {
     left: -14%;
     width: 100px;
     height: 94px;
+    animation: float infinite linear 3.2s;
   }
   .candy {
     right: -14%;
+    animation: float infinite linear 3s;
   }
   .bat {
     left: -28px;
+    animation: float infinite linear 5.2s;
   }
   .ghost {
     left: -14%;
+    animation: ghost-out ease-in-out 3s, float infinite linear 4.4s;
   }
   .cat {
     right: -15%;
+    animation: float infinite linear 5s;
   }
   .witch {
     right: -15%;
+    animation: float infinite linear 6s;
   }
-
-  .hand,
-  .basket,
-  .skeleton,
-  .bat,
-  .ghost,
-  .candy,
-  .witch,
-  .cat {
-    animation: float infinite linear 4.4s;
+  .basket {
+    animation: basket-out ease-in-out 3s, float infinite linear 5.2s;
+  }
+  .hand {
+    animation: hand-out ease-in-out 3s, float infinite linear 5.2s;
   }
 }
 @media (min-width: 481px) and (max-width: 920px) {
